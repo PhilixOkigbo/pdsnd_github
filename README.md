@@ -4,7 +4,7 @@
 created on 10/5/2023
 
 ### Project Title
-Explore US Bikeshare Data
+**Explore US Bikeshare Data**
 
 ### Description
 This project is about exploring the US Bikeshare data for the following cities
@@ -14,8 +14,17 @@ This project is about exploring the US Bikeshare data for the following cities
 Users can simply select the city they want to explore and filter the data by month, day of the week or not and can also get to see some or all of the raw data used in the computation.
 
 ### Files used
-Include the files used
+Bikeshare data for Chicagi, New York City and Washington
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+
+In carrying out this project, I have made use of chat gpt for bugs identification and resolution.
+
+https://pandas.pydata.org/docs/reference/frame.html: I used this resources to understand how to use the to_string(), to_datetime(), index()  and several other methods
+
+I have also checked out several github repos to see the techniques used to solve some of the problems. See links below
+
+	* https://github.com/khaledimad/Explore-US-Bikeshare-Data/blob/master/bikeshare_2.py
+	* https://github.com/Aritra96/bikeshare-project/blob/master/bikeshare.py
+ 
 
