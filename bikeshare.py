@@ -147,13 +147,15 @@ def trip_duration_stats(df):
 
     # display total travel time
     total_duration = df['Trip Duration'].sum()
-    trip_hours = total_duration / 60 / 60
-    print('\nTotal travel time : ' + str(round(trip_hours, 2)) + ' hours')
+    total_mins, total_sec = divmod(total_duration, 60)
+    total_hrs, total_mins = divmod(total_mins, 60)
+    print('\nTotal travel time : %d hours, %2d mins, %2d seconds' % (total_hrs, total_mins, total_sec))
     
     # display mean travel time
     avg_total_duration = df['Trip Duration'].mean()
-    avg_trip_hours = avg_total_duration / 60 / 60
-    print('\nAverage travel time : ' + str(round(avg_trip_hours, 2)) + ' hours')
+    avg_mins, avg_sec = divmod(avg_total_duration, 60)
+    avg_hrs, avg_mins = divmod(avg_mins, 60)
+    print('\nAverage travel time : %d hours, %2d mins, %2d seconds' % (avg_hrs, avg_mins, avg_sec))
     
     
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -201,6 +203,7 @@ def raw_data(df):
         if response.lower() == 'yes':
             print(df[start:start + 5])
             start += 5
+            print('\nYou have {} rows of data left'.format(df.shape[0] - start))
         else: 
             break
 
