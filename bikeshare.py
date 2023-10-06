@@ -201,6 +201,7 @@ def raw_data(df):
         if response.lower() == 'yes':
             print(df[start:start + 5])
             start += 5
+            print('\nYou have {} rows of data left'.format(df.shape[0] - start))
         else: 
             break
 
